@@ -36,7 +36,7 @@ const users = [
   };
 
   // Secret key for JWT (replace with a strong secret in production)
-  const JWT_SECRET = 'your_secret_key_here';
+  const JWT_SECRET = 'your_secret_key';
   
   // Authentication endpoint
   app.post('/auth/login', (req, res) => {
@@ -62,7 +62,7 @@ const users = [
       setTimeout(() => {
         // Simulate successful provisioning
         resolve({ status: 'provisioned', ...environmentRequest });
-      }, 5000); // Simulate a 5-second provisioning process
+      }, 5000); // Simulating a 5-second provisioning process
     });
   }
   
@@ -83,7 +83,7 @@ const users = [
     };
   
     try {
-      // Simulate provisioning 
+      // Simulating provisioning 
       const provisionedEnvironment = await provisionEnvironment(environmentRequest);
   
       // Add the provisioned environment to the in-memory storage
