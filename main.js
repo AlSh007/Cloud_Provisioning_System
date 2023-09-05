@@ -7,8 +7,7 @@ const PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
 
-// routes
-
+//to store users data, in production we will use a database
 const users = [
     {
       id: 1,
