@@ -53,7 +53,11 @@ The Cloud Environment Provisioning System will consist of the following key comp
 - **Objective:** Create comprehensive documentation and perform testing.
 - **Details:** Extensive documentation will be produced using Markdown editors or Confluence, covering system setup, configuration, and usage. Rigorous testing will include unit and integration tests using Mocha and Chai for Node.js, along with API endpoint testing using Postman.
 
-### Step 10: Integration with AWS Services (Optional)
+### Step 10: UI Development with React
+- **Objective**: Develop a user interface using React to enhance the user experience.
+- **Details**: A JavaScript-based user interface will be developed using React, providing an intuitive and interactive frontend for users to interact with the system.
+
+### Step 11: Integration with AWS Services (Optional)
 
 - **Objective:** Integrate with AWS services to enhance functionality.
 - **Details:** Integration with AWS services will be optional and based on project requirements. AWS SDKs for Node.js will be utilized for programmatic integration, and AWS IAM will manage access control. AWS SNS will provide enhanced notification capabilities if chosen.
