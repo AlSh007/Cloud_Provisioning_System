@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This design plan outlines the development of the Cloud Environment Provisioning System designed to run on Amazon Web Services Elastic Kubernetes Service (AWS EKS). The system's primary goal is to facilitate the efficient provisioning of cloud environments for developers and less problems to DevOps teams while ensuring robustness, security, and user-friendliness.
+This design plan outlines the development of the Cloud Environment Provisioning System designed to run on Amazon Web Services Elastic Kubernetes Service (AWS EKS). The core objective of the system is to streamline the efficient provisioning of cloud environments for developers, reducing operational challenges for DevOps teams, all while upholding robustness, security, and user-friendliness.
 
 ## System Overview
 
@@ -20,8 +20,27 @@ The Cloud Environment Provisioning System will consist of the following key comp
 
 ### Step 3: Environment Provisioning Logic with eksctl on AWS EKS
 
-- **Objective:** Dynamically generate eksctl configurations and create EKS clusters on AWS EKS.
-- **Details:** Dynamic eksctl configurations will be generated based on user requests and executed using the AWS Command Line Interface (CLI). AWS Identity and Access Management (IAM) will manage role-based permissions, ensuring secure environment provisioning.
+- **Objective:**: Dynamically generate eksctl configurations and create EKS clusters on AWS EKS using eksctl.
+
+- **Details:**
+
+- **3.1. Dynamic eksctl Configuration Generation:**
+
+Develop a component within our API that dynamically generates eksctl configurations based on user requests. This configuration will encapsulate all the necessary parameters for EKS cluster creation, We can utilize Node.js' Handlebars.js library to generate configuration yaml file.
+
+- **3.2. Cluster Creation using eksctl**:
+
+We willPass the dynamically generated eksctl configuration as an input to the eksctl create cluster command, ensuring that all the required cluster resources are provisioned.
+We will also ensure that your API environment has the necessary permissions and IAM roles to execute eksctl commands securely.
+
+- **3.3. Error Handling and Validation**:
+
+We wiil also implement comprehensive error handling mechanisms within our API. Capture and handle errors that may occur during the eksctl cluster creation process.
+
+-  **3.4. Monitoring and Status Tracking**:
+
+We will continuously monitor the status of the EKS cluster provisioning process initiated by eksctl. We can capture the output and error streams of eksctl to track the progress.
+Implement status updates and notifications to inform users of the provisioning progress and completion.
 
 ### Step 4: Approval Process
 
