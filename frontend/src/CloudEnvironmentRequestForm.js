@@ -19,7 +19,7 @@ class CloudEnvironmentRequestForm extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
 
-    // You can perform validation and submit the request to your backend API here
+    // We can perform validation and submit the request to your backend API here
     // For simplicity, we'll just update the requestStatus state for demonstration purposes
     this.setState({ requestStatus: 'Request submitted successfully!' });
   }
