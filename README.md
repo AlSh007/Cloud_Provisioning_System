@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This design plan outlines the development of the Cloud Environment Provisioning System designed to run on Amazon Web Services Elastic Kubernetes Service (AWS EKS). The system's primary goal is to facilitate the efficient provisioning of cloud environments for developers and less problems to DevOps teams while ensuring robustness, security, and user-friendliness.
+This design plan outlines the development of the Cloud Environment Provisioning System designed to run on Amazon Web Services Elastic Kubernetes Service (AWS EKS). The core objective of the system is to streamline the efficient provisioning of cloud environments for developers, reducing operational challenges for DevOps teams, all while upholding robustness, security, and user-friendliness.
 
 ## System Overview
 
