@@ -30,7 +30,7 @@ Develop a component within our API that dynamically generates eksctl configurati
 
 - **3.2. Cluster Creation using eksctl**:
 
-We willPass the dynamically generated eksctl configuration as an input to the eksctl create cluster command, ensuring that all the required cluster resources are provisioned.
+We will pass the dynamically generated eksctl configuration as an input to the eksctl create cluster command, ensuring that all the required cluster resources are provisioned.
 We will also ensure that your API environment has the necessary permissions and IAM roles to execute eksctl commands securely.
 
 - **3.3. Error Handling and Validation**:
